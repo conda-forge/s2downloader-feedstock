@@ -1,5 +1,5 @@
 {% set name = "s2downloader" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/s2downloader-{{ version }}.tar.gz
-  sha256: 3124fa85a5d39e4ae262b411ee3642a5e119ca30d6a568a6cb63cfb84729b20f
+  sha256: e1142b4f4162bdc1b6a2f9e7858371340396bffae13d756c24bfcc0bf4684378
 
 build:
   entry_points:
