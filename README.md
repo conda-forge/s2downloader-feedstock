@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@DaRa42](https://github.com/DaRa42/)
+* [@romulogoncalves](https://github.com/romulogoncalves/)
 
