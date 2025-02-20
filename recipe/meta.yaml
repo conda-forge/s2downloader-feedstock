@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >=3.10
     - pytest-runner
     - pip
   run:
-    - python >={{ python_min }}
+    - python >=3.10
     - gdal
     - affine
     - pyproj
