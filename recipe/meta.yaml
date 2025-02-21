@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/s2downloader-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/s2downloader-{{ version }}.tar.gz
   sha256: df646606f3d32a8cafa26510b9d55e5db2ccbaa084342d0e2f8177ab70e1e1a8
 
 build:
@@ -14,15 +14,15 @@ build:
     - s2downloader=s2downloader.s2downloader_cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.10
     - pytest-runner
     - pip
   run:
-    - python >=3.7
+    - python >=3.10
     - gdal
     - affine
     - pyproj
@@ -49,6 +49,7 @@ test:
     - s2downloader --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://git.gfz-potsdam.de/fernlab/products/data-portal/s2downloader
