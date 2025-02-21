@@ -14,15 +14,15 @@ build:
     - s2downloader=s2downloader.s2downloader_cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.10
     - pytest-runner
     - pip
   run:
-    - python >=3.7
+    - python >=3.10
     - gdal
     - affine
     - pyproj
@@ -49,6 +49,7 @@ test:
     - s2downloader --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://git.gfz-potsdam.de/fernlab/products/data-portal/s2downloader
@@ -58,5 +59,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - danschef
     - romulogoncalves
     - DaRa42
