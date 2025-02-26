@@ -22,7 +22,7 @@ requirements:
     - python {{ python_min }}
     - pytest-runner
     - pip
-    - setuptools
+    - hatchling
   run:
     - python {{ python_min }}
     - gdal
