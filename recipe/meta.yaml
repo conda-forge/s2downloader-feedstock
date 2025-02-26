@@ -21,6 +21,7 @@ requirements:
     - python >=3.10
     - pytest-runner
     - pip
+    - setuptools
   run:
     - python >=3.10
     - gdal
