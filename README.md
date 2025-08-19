@@ -145,5 +145,5 @@ Feedstock Maintainers
 
 * [@DaRa42](https://github.com/DaRa42/)
 * [@danschef](https://github.com/danschef/)
-* [@romulogoncalves](https://github.com/romulogoncalves/)
+* [@jo-kno](https://github.com/jo-kno/)
 
