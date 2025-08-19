@@ -15,7 +15,7 @@ build:
     - s2downloader=s2downloader.s2downloader_cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
     - pip
     - hatchling
   run:
-    - python {{ python_min }}
+    - python >={{ python_min }}
     - gdal
     - affine
     - pyproj
@@ -62,5 +62,5 @@ about:
 extra:
   recipe-maintainers:
     - danschef
-    - romulogoncalves
+    - jo-kno
     - DaRa42
