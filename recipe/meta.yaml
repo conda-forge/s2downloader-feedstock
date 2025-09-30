@@ -25,23 +25,18 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - gdal
+    - numpy >=2.0
     - affine
     - pyproj
-    - numpy
-    - matplotlib-base
     - geojson
+    - geojson-pydantic
     - rasterio
-    - geopy
-    - pandas
-    - geopandas >=0.11
+    - geopandas >=1.0
     - shapely
-    - rtree
-    - python-dateutil
     - pystac
+    - geopy
     - pystac-client
     - pydantic
-    - geojson-pydantic
 
 test:
   imports:
