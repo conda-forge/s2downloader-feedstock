@@ -49,7 +49,7 @@ test:
     - python {{ python_min }}
 
 about:
-  home: https://git.gfz-potsdam.de/fernlab/products/data-portal/s2downloader
+  home: https://git.gfz-potsdam.de/fernlab/products/s2downloader
   summary: Downloader for Sentinel-2 from aws.
   license: MPL-2.0
   license_file: LICENSE
