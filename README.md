@@ -3,7 +3,7 @@ About s2downloader-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/s2downloader-feedstock/blob/main/LICENSE.txt)
 
-Home: https://git.gfz-potsdam.de/fernlab/products/data-portal/s2downloader
+Home: https://git.gfz-potsdam.de/fernlab/products/s2downloader
 
 Package license: MPL-2.0
 
