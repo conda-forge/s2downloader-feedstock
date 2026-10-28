@@ -1,0 +1,69 @@
+schema_version: 1
+
+context:
+  name: s2downloader
+  version: "1.4.6"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/s2downloader-${{ version }}.tar.gz
+  sha256: d715e4a1ea469deb3b3b00182ec3670b0fbcb7080b1f8874ddaa894c4a1326bc
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - s2downloader=s2downloader.s2downloader_cli:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pytest-runner
+    - pip
+    - hatchling
+  run:
+    - python >=${{ python_min }}
+    - numpy >=2.0
+    - affine
+    - pyproj
+    - geojson
+    - geojson-pydantic
+    - rasterio
+    - geopandas >=1.0
+    - shapely
+    - pystac
+    - geopy
+    - pystac-client
+    - pydantic
+
+tests:
+  - python:
+      imports:
+        - s2downloader
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - s2downloader --help
+
+about:
+  summary: Downloader for Sentinel-2 from aws.
+  license: MPL-2.0
+  license_file: LICENSE
+  homepage: https://git.gfz-potsdam.de/fernlab/products/s2downloader
+
+extra:
+  recipe-maintainers:
+    - danschef
+    - jo-kno
+    - DaRa42
