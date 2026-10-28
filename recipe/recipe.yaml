@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: s2downloader
   version: "1.4.6"
-  python_min: "3.10"
 
 package:
   name: ${{ name|lower }}
